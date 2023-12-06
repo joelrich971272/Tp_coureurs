@@ -5,11 +5,13 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Random;
 
 public class GestionDesCoureurs {
+    private String b ;
 
    ArrayList<Coureur> coureurs = new ArrayList<>() ;
 
@@ -84,7 +86,8 @@ public class GestionDesCoureurs {
 
         }
         Path coureur = Paths.get("coureur.txt");
-        coureur = Files.newBufferedReader(coureur,Charset.defaultCharset());
+        bw = Files.newBufferedWriter(coureur,Charset.defaultCharset(), StandardOpenOption.APPEND);
+        while (b = bw.write(coureurs);
 
     }
 
